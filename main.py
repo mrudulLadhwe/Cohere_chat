@@ -1,7 +1,8 @@
 from email import message
 import cohere
 
-co = cohere.Client('A9J1pyRyWHXWkKhst9F0b9WA2MgkvJnFDE7uslHs')
+#setup cohere client
+co = cohere.Client('first_trial_key')
 
 # chat_history = []
 # max_turns = 10
@@ -27,6 +28,7 @@ co = cohere.Client('A9J1pyRyWHXWkKhst9F0b9WA2MgkvJnFDE7uslHs')
 # 	chat_history.append(user_message)
 # 	chat_history.append(bot_message)
 
+#Call the endpoint via the co.chat()
 response = co.chat(
   chat_history=[
     {"role": "USER", "message": "Who discovered gravity?"},
